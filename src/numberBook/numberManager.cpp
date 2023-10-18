@@ -81,6 +81,7 @@ void printPerson(Person p){
 
 void showPerson(AddressBook *abs){
     if(abs->size==0){
+        cout<<"通讯录为空"<<endl;
         return;
     }
     for(int i=0;i<abs->size;i++){
@@ -88,6 +89,59 @@ void showPerson(AddressBook *abs){
         printPerson(p);
     }
     system("clear");
+}
+
+int personIsExist(AddressBook *abs, string name){
+    for(int i=0;i<abs->size;i++){
+        if(abs->personArray[i].name==name){
+            return i;
+        }
+    }
+    return -1;
+
+}
+
+void deletePerson(AddressBook *abs){
+    cout << " 请输入删除联系人姓名：" << endl;
+    string name;
+    cin >> name;
+    int index = personIsExist(abs, name);
+    if (index == -1) {
+        cout << "查无此人" << endl;
+    } else {
+        for(int i=i;i<abs->size;i++){
+            abs->personArray[i] = abs->personArray[i+1];
+        }
+        abs->size-=1;
+        cout << "删除成功" << endl;
+    }
+    system("clear");
+}
+
+void findPerson(AddressBook *abs){
+    string name;
+    cout<<"请输入要查找的人姓名："<<endl;
+    cin>>name;
+    int index = personIsExist(abs, name);
+    if(index!=-1){
+        printPerson(abs->personArray[index]);
+    }else{
+        cout<<"查无此人！"<<endl;
+    }
+    system("clear");
+}
+
+void modifyPerson(AddressBook *abs){
+    string name;
+    cout<<"请输入需要修改人姓名："<<endl;
+    cin>>name;
+    int index = personIsExist(abs, name);
+    if(index!=-1){
+
+    }else{
+        cout<<"查无此人"<<endl;
+    }
+    system("clear")
 }
 
 int main(){
@@ -106,8 +160,10 @@ int main(){
                 showPerson(&abs);
                 break;
             case 3:   //3、删除联系人
+                deletePerson(&abs);
                 break;
             case 4:   //4、查找联系人
+                findPerson(&abs);
                 break;
             case 5:   //5、修改联系人
                 break;
