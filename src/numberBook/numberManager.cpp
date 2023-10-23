@@ -137,11 +137,42 @@ void modifyPerson(AddressBook *abs){
     cin>>name;
     int index = personIsExist(abs, name);
     if(index!=-1){
+        string name;
+        cout<<"请输入姓名："<<endl;
+        cin>>name;
+        abs->personArray[index].name=name;
+        cout<<"请输入性别：1 男  0  女"<<endl;
+        int sex = 0;
+        while(true) {
+            cin >> sex;
+            if (sex == 1 || sex == 2) {
+                abs->personArray[index].sex = sex;
+                break;
+            }
+            cout<<"重新输入性别"<<endl;
+        }
+        cout<<"请输入年龄："<<endl;
+        int age;
+        cin>>age;
+        abs->personArray[index].age=age;
+        cout<<"请输入联系电话："<<endl;
+        string phone;
+        cin>>phone;
+        abs->personArray[index].phone=phone;
+        cout<<"请输入地址："<<endl;
+        string address;
+        cin>>address;
+        abs->personArray[index].address=address;
 
     }else{
         cout<<"查无此人"<<endl;
     }
-    system("clear")
+    system("clear");
+}
+
+void cleanPerson(AddressBook *abs){
+    abs->size=0;
+    cout<<"通讯录已清空"<<endl;
 }
 
 int main(){
@@ -166,8 +197,10 @@ int main(){
                 findPerson(&abs);
                 break;
             case 5:   //5、修改联系人
+                modifyPerson(&abs);
                 break;
             case 6:   //6、清空联系人
+                cleanPerson(&abs);
                 break;
             case 0:   //0、退出通讯录
                 cout << "欢迎下次使用" << endl;
