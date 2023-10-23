@@ -175,7 +175,7 @@ void cleanPerson(AddressBook *abs){
     cout<<"通讯录已清空"<<endl;
 }
 
-int main(){
+int main22222(){
     AddressBook abs;
     abs.size = 0;
     int select=0;  //创建用户选择输入的变量
