@@ -9,4 +9,7 @@ add_executable(C_code
         src/numberBook/numberManager.cpp
         src/mermory/globalMerrory.cpp
         src/mermory/stackMerror.cpp
-        src/mermory/heapMerroy.cpp)
+        src/mermory/heapMerroy.cpp
+        src/quote/functionQuote.cpp
+        src/quote/constQuote.cpp
+        src/classStudy/circle.cpp)

@@ -10,7 +10,7 @@ int * func2(){
     return p;
 }
 
-int main(){
+int main1111111(){
     int *p=func2();
     cout<<*p<<endl;
     cout<<*p<<endl;
