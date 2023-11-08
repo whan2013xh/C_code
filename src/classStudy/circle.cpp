@@ -64,7 +64,7 @@ void isInside(Circle c, Point p){
     }
 }
 
-int main(){
+int main11111111111111111(){
     SetConsoleOutputCP(CP_UTF8);
     Point p1=Point();
     p1.setX(10);
