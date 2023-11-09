@@ -12,4 +12,7 @@ add_executable(C_code
         src/mermory/heapMerroy.cpp
         src/quote/functionQuote.cpp
         src/quote/constQuote.cpp
-        src/classStudy/circle.cpp)
+        src/classStudy/circle.cpp
+        src/classStudy/ConstructFunc.cpp
+        src/classStudy/copyConstruct.cpp
+        src/classStudy/constructOrder.cpp)

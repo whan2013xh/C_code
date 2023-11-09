@@ -55,7 +55,7 @@ void test03(){
     Person3 p=doWork3();
     cout<<"test03 p:"<<(int *)&p<<endl;
 }
-int main(){
+int mainzzz(){
     cout<<"test01"<<endl;
     test011();
     cout<<"test02"<<endl;

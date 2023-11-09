@@ -2,7 +2,7 @@
 // Created by mayn on 2023/11/6.
 //
 #include <iostream>
-#include <windows.h>
+//#include <windows.h>
 using namespace std;
 
 class Point{
@@ -65,7 +65,7 @@ void isInside(Circle c, Point p){
 }
 
 int main11111111111111111(){
-    SetConsoleOutputCP(CP_UTF8);
+//    SetConsoleOutputCP(CP_UTF8);
     Point p1=Point();
     p1.setX(10);
     p1.setY(12);
