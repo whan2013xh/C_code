@@ -29,6 +29,6 @@ void tests(){
 
 }
 
-int main(){
+int main22222222222222(){
     tests();
 }
